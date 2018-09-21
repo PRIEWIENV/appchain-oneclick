@@ -1,5 +1,17 @@
 version: "3"
 services:
+  cita:
+    image: cita/cita-run:ubuntu-18.04-20180813
+    volumes:
+      - ./cita/target/install:/opt/cita-run
+      - /etc/localtime:/etc/localtime
+    network_mode: "host"
+    container_name: cita_run
+    working_dir: /opt/cita-run
+    stdin_open: true
+    command: /bin/bash -c "while true;do sleep 100;done"
+    environment:
+      - USER_ID=1000
 
   db:
     image: postgres:10.5
@@ -7,30 +19,28 @@ services:
       - ./docker/data:/var/lib/postgresql/data
   app:
     build:
-      context: ./re-birth/re-birth
+      context: ./re-birth
       dockerfile: ./docker/app/Dockerfile
     volumes:
-      - ./re-birth/re-birth:/app
+      - ./re-birth:/app
     command: bundle exec puma -C config/puma.docker.rb
     depends_on:
       - db
   sync:
     build:
-      context: ./re-birth/re-birth
+      context: ./re-birth
       dockerfile: ./docker/app/Dockerfile
     volumes:
-      - ./re-birth/re-birth:/app
+      - ./re-birth:/app
     command: bash -c "rails daemons:sync:start && tail -f /app/log/production_sync.log"
     depends_on:
       - db
   re-birth:
     build:
-      context: ./re-birth/re-birth
+      context: ./re-birth
       dockerfile: ./docker/web/Dockerfile
     depends_on:
       - app
-    expose:
-      - "80"
 
   microscope:
     build:
@@ -40,5 +50,5 @@ services:
     depends_on:
       - re-birth
     ports:
-      - "8080:80"
+      - 8080:8080
 

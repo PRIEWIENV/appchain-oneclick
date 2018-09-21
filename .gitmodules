@@ -1,9 +1,0 @@
-[submodule "cita"]
-	path = cita
-	url = git@github.com:PRIEWIENV/cita.git
-[submodule "re-birth"]
-	path = re-birth
-	url = git@github.com:PRIEWIENV/re-birth.git
-[submodule "microscope"]
-	path = microscope
-	url = git@github.com:PRIEWIENV/microscope.git
