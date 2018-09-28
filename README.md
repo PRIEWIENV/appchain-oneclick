@@ -5,7 +5,8 @@
 ### Get the Repo
 
 ```bash
-git submodule init && git submodule update
+git clone git@github.com:PRIEWIENV/appchain-oneclick.git --recursive
+cd appchain-oneclick
 ```
 
 ### Build cita
@@ -17,7 +18,7 @@ cd cita/cita && git submodule init && git submodule update && ./env.sh make rele
 ### Build & Configure Microscope
 
 ```bash
-cd ../microscope/microscope
+cd ../../microscope/microscope
 cp ../.env ./
 yarn install
 yarn run dll && yarn run build:prod
@@ -26,7 +27,7 @@ yarn run dll && yarn run build:prod
 ### Configure re-birth
 
 ```bash
-cd ..
+cd ../..
 cp re-birth/.env.local re-birth/re-birth/
 ```
 
