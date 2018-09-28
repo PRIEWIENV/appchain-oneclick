@@ -1,9 +1,0 @@
-[submodule "re-birth/re-birth"]
-	path = re-birth/re-birth
-	url = git@github.com:cryptape/re-birth.git
-[submodule "cita/cita"]
-	path = cita/cita
-	url = git@github.com:cryptape/cita.git
-[submodule "microscope/microscope"]
-	path = microscope/microscope
-	url = git@github.com:cryptape/microscope.git
