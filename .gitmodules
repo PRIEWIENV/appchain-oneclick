@@ -4,6 +4,3 @@
 [submodule "microscope/microscope"]
 	path = microscope/microscope
 	url = git@github.com:cryptape/microscope.git
-[submodule "re-birth/re-birth"]
-	path = re-birth/re-birth
-	url = git@github.com:cryptape/re-birth.git
