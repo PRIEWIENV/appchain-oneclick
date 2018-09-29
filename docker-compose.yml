@@ -4,14 +4,12 @@ services:
     image: cita/cita-run:ubuntu-18.04-20180813
     volumes:
       - ./cita:/opt/cita-run
-      - /etc/localtime:/etc/localtime
-    # network_mode: "host"
-    container_name: cita_run
-    working_dir: /opt/cita-run/cita/target/install
+      - ${LOCALTIME_PATH}:/etc/localtime
+    container_name: cita_secp256k1_sha3_run
+    working_dir: /opt/cita-run/cita_secp256k1_sha3
     stdin_open: true
     command: /opt/cita-run/create_main.sh
-    environment:
-      - USER_ID=1000
+    env_file: .env
     ports:
         - "1337:1337"
 
