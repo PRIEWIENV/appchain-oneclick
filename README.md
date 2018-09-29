@@ -1,39 +1,40 @@
 # appchain-oneclick
 
+## Overview
+
+
+### commit
+
+- CITA: e5ccb40
+- Microscope: bef33a9
+- Re-Birth: 4c9eec1
+
 ## Usage
 
 ### Get the Repo
 
 ```bash
-git submodule init && git submodule update
+git clone git@github.com:PRIEWIENV/appchain-oneclick.git --recursive
+cd appchain-oneclick
 ```
 
-### Build cita
+### Configure
 
 ```bash
-cd cita/cita && git submodule init && git submodule update && ./env.sh make release
+./configure.sh
 ```
 
-### Build & Configure Microscope
+### Build the docker compose
 
-```bash
-cd ../microscope/microscope
-cp ../.env ./
-yarn install
-yarn run dll && yarn run build:prod
-```
-
-### Configure re-birth
-
-```bash
-cd ..
-cp re-birth/.env.local re-birth/re-birth/
-```
-
-### Start the docker compose
+Run once when first use.
 
 ```bash
 docker-compose build
 docker-compose run --rm app bundle exec rake db:setup
+```
+
+### Start docker compose
+
+```bash
 docker-compose up
 ```
