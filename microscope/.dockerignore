@@ -1,2 +1,46 @@
-microscope/*
-!microscope/dist
+# Sys
+**/.DS_Store
+
+# Logs
+*.log
+
+# Dependency Directories
+*/node_modules
+*/locale/*
+
+# DLL
+*/dll
+*/lib
+
+# Build
+*/dist
+*/Microscope
+*/*.tar.gz
+
+# Optional npm cache directory
+*/.npm
+
+# Optional yarn error log
+*/yarn-error
+
+# deploy script and package
+*/scripts
+*/cita-toys-wallet
+
+# secret
+*/.env
+
+# default server list
+*/defaultServerList.json
+
+# Vim swap
+**/*.swp
+
+# git
+*/.git
+*/.gitignore
+
+# vscode
+**/.vscode
+
+*/package-lock.json

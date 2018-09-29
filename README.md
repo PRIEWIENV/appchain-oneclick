@@ -17,23 +17,13 @@ cd appchain-oneclick
 ### Build cita
 
 ```bash
-cd cita/cita && git submodule init && git submodule update && ./env.sh make release
+./env.sh make release
 ```
 
-### Build & Configure Microscope
+### Configuration
 
 ```bash
-cd ../../microscope/microscope
-cp ../.env ./
-yarn install
-yarn run dll && yarn run build:prod
-```
-
-### Configure re-birth
-
-```bash
-cd ../..
-cp re-birth/.env.local re-birth/re-birth/
+./configure.sh
 ```
 
 ### Start the docker compose
