@@ -2,6 +2,11 @@
 
 ## Usage
 
+### Requirements
+
+- Docker 17.05 or higher
+- Docker Compose
+
 ### Get the Repo
 
 ```bash

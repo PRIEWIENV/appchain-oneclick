@@ -2,7 +2,7 @@ FROM nginx:1.15.3
 
 WORKDIR /opt/nginx
 
-COPY dist/ dist/
+COPY microscope/dist/ dist/
 
 RUN mkdir log
 
