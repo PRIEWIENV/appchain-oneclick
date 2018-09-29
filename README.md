@@ -2,19 +2,27 @@
 
 ## Overview
 
-
 ### commit
 
 - CITA: e5ccb40
 - Microscope: bef33a9
-- Re-Birth: 4c9eec1
+- ReBirth: 4c9eec1
+
+## Disclaimer
+
+appchain-oneclick is just a developing tool now, do not take it as an official chain.
 
 ## Usage
+
+### Requirements
+
+- Docker
+- Docker Compose
 
 ### Get the Repo
 
 ```bash
-git clone git@github.com:PRIEWIENV/appchain-oneclick.git --recursive
+git clone -b docker git@github.com:PRIEWIENV/appchain-oneclick.git --recursive
 cd appchain-oneclick
 ```
 
@@ -38,3 +46,9 @@ docker-compose run --rm app bundle exec rake db:setup
 ```bash
 docker-compose up
 ```
+
+### Exposed port
+
+- CITA: http://localhost:1337/
+- ReBirth: http://localhost:8888/
+- Microscope: http://localhost:8080/
