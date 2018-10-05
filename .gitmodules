@@ -3,4 +3,4 @@
 	url = git@github.com:cryptape/cita.git
 [submodule "microscope/microscope"]
 	path = microscope/microscope
-	url = git@github.com:cryptape/microscope.git
+	url = git@github.com:PRIEWIENV/microscope.git
