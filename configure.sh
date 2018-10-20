@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+CITA="https://github.com/cryptape/cita/releases/download/v0.19/cita_secp256k1_sha3.tar.gz"
+
+wget -P cita -c ${CITA} -t 8 -T 120
+
+tar -zxvf cita/cita_secp256k1_sha3.tar.gz -C cita
+
+rm cita/cita_secp256k1_sha3.tar.gz
+
 if [[ `uname` == 'Darwin' ]]
 then
     cp /etc/localtime $PWD/localtime
