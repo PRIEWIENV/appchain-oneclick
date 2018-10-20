@@ -16,21 +16,21 @@ services:
   db:
     image: postgres:10.5
     volumes:
-      - ./docker/data:/var/lib/postgresql/data
+      - ./re-birth/re-birth/docker/data:/var/lib/postgresql/data
   app:
     build:
       context: ./re-birth/re-birth
-      dockerfile: ./docker/app/Dockerfile
+      dockerfile: ./re-birth/re-birth/docker/app/Dockerfile
     volumes:
       - ./re-birth/re-birth:/app
-    command: bundle exec puma -C config/puma.docker.rb
+    command: bundle exec puma -C ./re-birth/re-birth/config/puma.docker.rb
     depends_on:
       - db
       - cita
   sync:
     build:
       context: ./re-birth/re-birth
-      dockerfile: ./docker/app/Dockerfile
+      dockerfile: ./re-birth/re-rebirth/docker/app/Dockerfile
     volumes:
       - ./re-birth/re-birth:/app
     command: bash -c "rails daemons:sync:start && tail -f /app/log/production_sync.log"
@@ -39,7 +39,7 @@ services:
   re-birth:
     build:
       context: ./re-birth/re-birth
-      dockerfile: ./docker/web/Dockerfile
+      dockerfile: ./re-birth/re-birth/docker/web/Dockerfile
     depends_on:
       - app
       - cita
@@ -49,7 +49,7 @@ services:
   microscope:
     build:
       context: ./microscope
-      dockerfile: ./Dockerfile
+      dockerfile: ./microscope/Dockerfile
     tty: true
     depends_on:
       - re-birth
