@@ -6,7 +6,7 @@ services:
       - ./cita:/opt/cita-run
       - ${LOCALTIME_PATH}:/etc/localtime
     container_name: cita_run
-    working_dir: /opt/cita-run/cita/target/install
+    working_dir: /opt/cita-run/cita_secp256k1_sha3/
     stdin_open: true
     command: /opt/cita-run/create_main.sh
     env_file: .env
@@ -19,6 +19,6 @@ services:
       dockerfile: ./Dockerfile
     tty: true
     depends_on:
-      - re-birth
+      - cita
     ports:
       - "8080:80"
