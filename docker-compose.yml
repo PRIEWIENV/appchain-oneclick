@@ -30,7 +30,7 @@ services:
   sync:
     build:
       context: ./re-birth/re-birth
-      dockerfile: ./re-birth/re-rebirth/docker/app/Dockerfile
+      dockerfile: ./re-birth/re-birth/docker/app/Dockerfile
     volumes:
       - ./re-birth/re-birth:/app
     command: bash -c "rails daemons:sync:start && tail -f /app/log/production_sync.log"
