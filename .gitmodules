@@ -1,6 +1,3 @@
-[submodule "cita/cita"]
-	path = cita/cita
-	url = git@github.com:cryptape/cita.git
 [submodule "microscope/microscope"]
 	path = microscope/microscope
 	url = git@github.com:PRIEWIENV/microscope.git

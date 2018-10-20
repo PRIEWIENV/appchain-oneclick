@@ -10,14 +10,8 @@
 ### Get the Repo
 
 ```bash
-git clone git@github.com:PRIEWIENV/appchain-oneclick.git --recursive
+git clone -b develop git@github.com:PRIEWIENV/appchain-oneclick.git --recursive
 cd appchain-oneclick
-```
-
-### Build cita
-
-```bash
-./env.sh make release
 ```
 
 ### Configuration
