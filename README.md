@@ -22,7 +22,7 @@ appchain-oneclick is just a developing tool now, do not take it as an official c
 ### Get the Repo
 
 ```bash
-git clone -b docker git@github.com:PRIEWIENV/appchain-oneclick.git --recursive
+git clone git@github.com:PRIEWIENV/appchain-oneclick.git --recursive
 cd appchain-oneclick
 ```
 
