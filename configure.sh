@@ -1,12 +1,23 @@
 #!/usr/bin/env bash
 
-CITA="https://github.com/cryptape/cita/releases/download/v0.19/cita_secp256k1_sha3.tar.gz"
+CITA_URL="https://github.com/cryptape/cita/releases/download/v0.19/cita_secp256k1_sha3.tar.gz"
+CITA="cita_secp256k1_sha3.tar.gz"
 
-wget -P cita -c ${CITA} -t 8 -T 120
 
-tar -zxvf cita/cita_secp256k1_sha3.tar.gz -C cita
-
-rm cita/cita_secp256k1_sha3.tar.gz
+cd cita
+if [ ! -f $CITA ]; then
+    curl -fLO ${CITA_URL} --retry 8
+fi
+sha1sum -c cita-sha1 | grep -q "OK$"
+if [ $? -ne 0 ]; then
+    echo "$CITA SHA-1 failed!"
+    exit
+else
+    rm -rf cita_secp256k1_sha3
+    tar -zxvf $CITA
+    rm $CITA
+fi
+cd -
 
 if [[ `uname` == 'Darwin' ]]
 then
