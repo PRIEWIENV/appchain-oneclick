@@ -10,7 +10,7 @@
 ### Get the Repo
 
 ```bash
-git clone -b develop git@github.com:PRIEWIENV/appchain-oneclick.git --recursive
+git clone -b develop https://github.com/PRIEWIENV/appchain-oneclick.git --recursive
 cd appchain-oneclick
 ```
 
