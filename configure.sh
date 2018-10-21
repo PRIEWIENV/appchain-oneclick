@@ -1,21 +1,23 @@
 #!/usr/bin/env bash
 
-CITA_URL="https://github.com/cryptape/cita/releases/download/v0.19/cita_secp256k1_sha3.tar.gz"
-CITA="cita_secp256k1_sha3.tar.gz"
-
+CITA="cita_secp256k1_sha3"
+CITA_TAR="$CITA.tar.gz"
+CITA_URL="https://github.com/cryptape/cita/releases/download/v0.19/$CITA_TAR"
 
 cd cita
-if [ ! -f $CITA ]; then
-    curl -fLO ${CITA_URL} --retry 8
-fi
-sha1sum -c cita-sha1 | grep -q "OK$"
-if [ $? -ne 0 ]; then
-    echo "$CITA SHA-1 failed!"
-    exit
-else
-    rm -rf cita_secp256k1_sha3
-    tar -zxvf $CITA
-    rm $CITA
+if [ ! -d $CITA ]; then
+    if [ ! -f $CITA_TAR ]; then
+        curl -fLO $CITA_URL --retry 8
+    fi
+    shasum -a 1 -c cita-sha1 | grep -q "OK$"
+    if [ $? -ne 0 ]; then
+        echo "$CITA SHA-1 failed!"
+        exit
+    else
+        rm -rf $CITA_TAR
+        tar -zxvf $CITA_TAR
+        rm $CITA_TAR
+    fi
 fi
 cd -
 

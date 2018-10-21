@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "author": "PRIEWIENV",
+  "license": "ISC",
+  "dependencies": {
+    "@nervos/chain": "^0.18.0"
+  }
+}
