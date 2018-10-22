@@ -18,13 +18,11 @@ if [ ! -d "test-chain" ]; then
     --ws_port 4337 \
     --grpc_port 5000 \
     --nodes "127.0.0.1:4000,127.0.0.1:4001,127.0.0.1:4002,127.0.0.1:4003" \
-    --authorities "$ADDR_0,$ADDR_1,$ADDR_2,$ADDR_3" \
     --contract_arguments "SysConfig.chainId=1" "SysConfig.economicalModel=1"
 fi
 
 for i in {0..3}
 do
-    eval echo '$PRIV_'"$i" > test-chain/$i/privkey
     ./bin/cita setup test-chain/$i
 done
 

@@ -1,5 +1,6 @@
 docker
 cita/cita_secp256k1_sha3
+cita/*.tar.gz
 .env
 
 test/node_modules
