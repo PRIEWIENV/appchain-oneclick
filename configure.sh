@@ -14,7 +14,6 @@ if [ ! -d $CITA ]; then
         echo "$CITA SHA-1 failed!"
         exit
     else
-        rm -rf $CITA_TAR
         tar -zxvf $CITA_TAR
         rm $CITA_TAR
     fi
