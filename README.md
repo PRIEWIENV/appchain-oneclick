@@ -59,6 +59,38 @@ docker-compose up
 - ReBirth: http://localhost:8888/
 - Microscope: http://localhost:8080/
 
+#### Stop and Restart
+
+* Stop docker compose gracefully
+
+Just press <kbd>Ctrl</kbd> + <kbd>C</kbd> once.
+
+* Restart
+
+```bash
+docker-compose up
+```
+
+* Clean all the data
+
+```bash
+rm -rf cita/cita_secp256k1_sha3/test-chain
+rm -rf docker
+docker-compose down
+```
+
+* Rebuild all the docker images
+
+```bash
+docker compose build --no-cache
+```
+
 ### OneClick Light
 
 Please refer to the [develop branch](https://github.com/PRIEWIENV/appchain-oneclick/tree/develop)
+
+## Features
+
+### Debug mode of Microscope
+
+### Default accounts with initial value
