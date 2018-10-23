@@ -27,6 +27,11 @@ docker-compose build
 docker-compose up
 ```
 
+### 4. Exposed port
+
+* CITA: http://localhost:1337/
+* Microscope: http://localhost:8080/
+
 ### Stop and Restart
 
 #### Stop docker compose gracefully
@@ -51,3 +56,9 @@ docker-compose down
 ```bash
 docker compose build --no-cache
 ```
+
+## Features
+
+### Debug mode of Microscope
+
+### Default accounts with initial value
