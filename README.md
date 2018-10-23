@@ -23,20 +23,20 @@ Nervos AppChain OneClick has two different packages. Full version includes ReBir
 - Docker
 - Docker Compose
 
-#### Get the Repo
+#### 1. Get the Repo
 
 ```bash
 git clone https://github.com/PRIEWIENV/appchain-oneclick.git --recursive
 cd appchain-oneclick
 ```
 
-#### Configure
+#### 2. Configure
 
 ```bash
 ./configure.sh
 ```
 
-#### Build the docker compose
+#### 3. Build the docker compose
 
 Run once when first use.
 
@@ -45,13 +45,13 @@ docker-compose build
 docker-compose run --rm app bundle exec rake db:setup
 ```
 
-#### Start docker compose
+#### 4. Start docker compose
 
 ```bash
 docker-compose up
 ```
 
-#### Exposed port
+#### 5. Exposed port
 
 - CITA: http://localhost:1337/
 - ReBirth: http://localhost:8888/
@@ -59,4 +59,4 @@ docker-compose up
 
 ### OneClick Light
 
-Please refer to <>
+Please refer to the [develop branch](https://github.com/PRIEWIENV/appchain-oneclick/tree/develop)
