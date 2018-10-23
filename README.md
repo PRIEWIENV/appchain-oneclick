@@ -24,7 +24,6 @@ cd appchain-oneclick
 
 ```bash
 docker-compose build
-docker-compose run --rm app bundle exec rake db:setup
 docker-compose up
 ```
 
