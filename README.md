@@ -7,23 +7,48 @@
 - Docker 17.05 or higher
 - Docker Compose
 
-### Get the Repo
+### 1. Get the Repo
 
-```bash
-git clone -b develop https://github.com/PRIEWIENV/appchain-oneclick.git --recursive
-cd appchain-oneclick
+```shell
+$ git clone -b develop https://github.com/PRIEWIENV/appchain-oneclick.git --recursive
+$ cd appchain-oneclick
 ```
 
-### Configuration
+### 2. Configuration
 
-```bash
-./configure.sh
+```shell
+$ ./configure.sh
 ```
 
-### Start the docker compose
+### 3. Start the docker compose
 
-```bash
-docker-compose build
-docker-compose run --rm app bundle exec rake db:setup
-docker-compose up
+```shell
+$ docker-compose build
+$ docker-compose run --rm app bundle exec rake db:setup
+$ docker-compose up
+```
+
+### Stop and Restart
+
+#### Stop docker compose gracefully
+
+Just press <kbd>Ctrl</kbd> + <kbd>C</kbd> once.
+
+#### Restart
+
+```shell
+$ docker-compose up
+```
+
+#### Clean all the data
+
+```shell
+$ rm -rf cita/cita_secp256k1_sha3/test-chain
+$ docker-compose down
+```
+
+#### Rebuild all the docker images
+
+```shell
+$ docker compose build --no-cache
 ```
