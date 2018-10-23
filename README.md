@@ -93,4 +93,9 @@ Please refer to the [develop branch](https://github.com/PRIEWIENV/appchain-onecl
 
 ### Debug mode of Microscope
 
+![](image/debugger_1.png)
+![](image/debugger_2.png)
+
 ### Default accounts with initial value
+
+![](image/initial_value.png)
