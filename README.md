@@ -45,6 +45,8 @@ docker-compose build
 docker-compose run --rm app bundle exec rake db:setup
 ```
 
+ReBirth database will be stored into the directory `docker/data`. This folder is root-privileged due to ReBirth itself. You don't need to run `docker-compose run --rm app bundle exec rake db:setup` again if this folder is not damaged.
+
 #### 4. Start docker compose
 
 ```bash
