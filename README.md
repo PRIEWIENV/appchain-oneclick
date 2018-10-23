@@ -56,9 +56,3 @@ docker-compose down
 ```bash
 docker compose build --no-cache
 ```
-
-## Features
-
-### Debug mode of Microscope
-
-### Default accounts with initial value
