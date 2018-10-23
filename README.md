@@ -27,6 +27,11 @@ docker-compose build
 docker-compose up
 ```
 
+### 4. Exposed port
+CITA: http://localhost:1337/
+ReBirth: http://localhost:8888/
+Microscope: http://localhost:8080/
+
 ### Stop and Restart
 
 #### Stop docker compose gracefully
