@@ -34,10 +34,10 @@ echo "Successfully setup test-chain!"
 
 # Start the nodes
 for i in {0..3};do
+    echo "Node $i starting..."
     ./bin/cita start test-chain/$i
-    echo "Node $i started!"
 done
-echo "Test chain started!"
+echo "Test chain started successfully!"
 
 # Send txs to transfer initial value to default accounts
 if [ "$HAS_CHAIN" = false ];then
