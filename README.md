@@ -1,4 +1,4 @@
-# appchain-oneclick
+# Nervos AppChain OneClick Light
 
 ## Usage
 
