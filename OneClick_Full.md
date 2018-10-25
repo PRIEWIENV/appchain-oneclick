@@ -26,7 +26,7 @@ cd appchain-oneclick
 ```bash
 ./configure.sh
 ```
-> If the `shasum` check fails, just delete the archive file `cita/cita_secp256k1_sha3.tar.gz` and run `./configure.sh` again. If the download process is stuck while configuring, you can download the [cita v0.19 release]() manually instead and then run `./configure.sh`.
+> If the `shasum` check fails, just delete the archive file `cita/cita_secp256k1_sha3.tar.gz` and run `./configure.sh` again. If the download process is stuck while configuring, you can download the [cita v0.19 release](https://github.com/cryptape/cita/releases) manually instead and then run `./configure.sh`.
 
 ### 3. Build the docker compose
 
@@ -55,7 +55,7 @@ docker-compose up
 
 * Stop docker compose gracefully
 
-Just press <kbd>Ctrl</kbd> + <kbd>C</kbd> once.
+  Just press <kbd>Ctrl</kbd> + <kbd>C</kbd> once.
 
 * Restart
 
