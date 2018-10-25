@@ -18,7 +18,7 @@ Nervos AppChain OneClick has two different packages. Full version includes ReBir
 
 ### Requirements
 
-- [Docker](https://docs.docker.com/install/)
+- [Docker](https://docs.docker.com/install/) 17.05 or higher
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
 ### OneClick Full
