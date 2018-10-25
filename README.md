@@ -19,12 +19,14 @@
 git clone -b develop https://github.com/PRIEWIENV/appchain-oneclick.git --recursive
 cd appchain-oneclick
 ```
+> Make sure that you are in the `develop` branch and there is submodule code of Microscope in the folder `appchain-oneclick/microscope/microscope`.
 
 ### 2. Configuration
 
 ```bash
 ./configure.sh
 ```
+> If the `shasum` check fails, just delete the archive file `cita/cita_secp256k1_sha3.tar.gz` and run `./configure.sh` again. If the download process is stuck while configuring, you can download the [cita v0.19 release]() manually instead and then run `./configure.sh`.
 
 ### 3. Start the docker compose
 
