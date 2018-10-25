@@ -1,11 +1,17 @@
 # Nervos AppChain OneClick Light
 
-## Usage
+## Components Support
+
+- CITA: v0.19
+- Microscope: `develop:a7a2bde`
+- ReBirth: `master:073d982`
+
+## Quick Start
 
 ### Requirements
 
-- Docker 17.05 or higher
-- Docker Compose
+- [Docker](https://docs.docker.com/install/) 17.05 or higher
+- [Docker Compose](https://docs.docker.com/compose/install/)
 
 ### 1. Get the Repo
 
@@ -34,25 +40,26 @@ docker-compose up
 
 ### Stop and Restart
 
-#### Stop docker compose gracefully
+* Stop docker compose gracefully
 
 Just press <kbd>Ctrl</kbd> + <kbd>C</kbd> once.
 
-#### Restart
+* Restart
 
 ```bash
 docker-compose up
 ```
 
-#### Clean all the data
+* Clean all the data
 
 ```bash
 rm -rf cita/cita_secp256k1_sha3/test-chain
 docker-compose down
 ```
 
-#### Rebuild all the docker images
+* Rebuild all the docker images
 
 ```bash
 docker compose build --no-cache
 ```
+
