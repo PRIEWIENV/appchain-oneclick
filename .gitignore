@@ -2,3 +2,5 @@ docker
 cita/cita_secp256k1_sha3
 .env
 *.swp
+.DS_Store
+localtime
