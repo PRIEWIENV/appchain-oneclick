@@ -12,16 +12,16 @@ Nervos AppChain OneClick is based on Nervos AppChain tool chain. It combines alm
 
 appchain-oneclick is just a developing tool now, do not take it as an official chain.
 
-## Usage
+## Quick Start
 
 Nervos AppChain OneClick has two different packages. Full version includes ReBirth and light version doesn't.
 
+### Requirements
+
+- [Docker](https://docs.docker.com/install/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
 ### OneClick Full
-
-#### Requirements
-
-- Docker
-- Docker Compose
 
 #### 1. Get the Repo
 
