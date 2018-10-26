@@ -1,3 +1,3 @@
 [submodule "re-birth/re-birth"]
 	path = re-birth/re-birth
-	url = git@github.com:cryptape/re-birth.git
+	url = https://github.com/cryptape/re-birth.git
