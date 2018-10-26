@@ -20,6 +20,11 @@ git clone https://github.com/PRIEWIENV/appchain-oneclick.git --recursive
 cd appchain-oneclick
 ```
 > Make sure that you are in the `master` branch and there is submodule code of Microscope in the folder `appchain-oneclick/microscope/microscope` and submodule code of ReBirth in the folder `appchain-oneclick/re-birth/re-birth`.
+> If you didn't use `--recursive` argument to pull the repo, please run the following command in the OneClick repo root directory to pull the submodules:
+> ```bash
+> git submodule init
+> git submodule update
+> ```
 
 ### 2. Configuration
 
